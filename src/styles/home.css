@@ -34,7 +34,7 @@
 
 .post-menu {
   display: flex;
-  background-color: #d6d6d6;
+  background-color: #fff;
   width: 100%;
   border-radius: 10px;
   margin-bottom: 40px;
@@ -55,7 +55,7 @@
   text-align: center;
   display: inline-block;
   font-size: 12px;
-  background: linear-gradient(135deg, #FFD700, #FFA500);
+  background: #798777;
   color: #ffffff;
   font-weight: 600;
   border-radius: 20px;
@@ -73,24 +73,25 @@
 .list_restaurant_img {
   width: 100%;
   min-height: 250px;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .list_restaurant_content {
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   text-align: justify;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  /* background-color: #f5f5f5; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1); */
   margin-bottom: 20px;
 }
 
 .list_restaurant_content h1 {
-  font-size: 30px;
-  padding: 10px;
-  color: #333333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  border-bottom: 1px solid #dddddd;
-  margin-bottom: 10px;
+  
 }
 
 .list_restaurant_content h1 a {
@@ -105,8 +106,18 @@
 }
 
 .list_restaurant_title {
-  font-weight: 500;
   transition: 0.3s opacity;
+  text-align: left;
+  font-size: 30px;
+  padding: 10px 0px;
+  color: #333333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #959595;
+  margin-bottom: 10px;
+  -webkit-transition: 0.3s opacity;
+  -moz-transition: 0.3s opacity;
+  -ms-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
 }
 
 .list_restaurant_title:hover {
@@ -128,18 +139,22 @@
 
 .list_restaurant_rating {
   position: absolute;
-  background: linear-gradient(135deg, #00b300, #33cc33);
+  background: #798777;
   padding: 10px 15px;
   text-align: center;
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
-  border-radius: 0px 8px 0px 0px;
-  margin-top: -50px;
-  margin-left: -10px;
+  border-radius: 8px;
+  margin-top: -65px;
+  margin-left: -5px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 .list_restaurant_rating span {

@@ -10,8 +10,13 @@ const DrawerInitiator = {
       drawer.classList.remove('open');
     };
 
-    button.addEventListener('click', toggleDrawer);
-    content.addEventListener('click', closeDrawer);
+    if (button) {
+      button.addEventListener('click', toggleDrawer);
+    }
+
+    if (content) {
+      content.addEventListener('click', closeDrawer);
+    }
   },
 };
 

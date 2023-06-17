@@ -8,8 +8,8 @@ const Home = {
     const heroSection = `
       <div class="hero">
         <div class="hero__inner">
-          <h1 class="hero__title">GastroGuide</h1>
-          <p class="hero__tagline">Indulge in Gastronomic Delights</p>
+          <h1 class="hero__title">Mabes Resto</h1>
+          <p class="hero__tagline">Makanan Enak, Lezat, Bergizi</p>
         </div>
       </div>
     `;

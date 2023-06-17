@@ -1,8 +1,8 @@
 footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
-  background-color: #2B7A0B;
+  background-color: #A2B29F;
   color: white;
   font-weight: 500;
   font-size: 14px;

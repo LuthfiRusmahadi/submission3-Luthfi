@@ -9,13 +9,12 @@ class NavbarCustom extends HTMLElement {
     const logoLink = document.createElement('a');
     logoLink.classList.add('brands');
     logoLink.href = '/';
-    logoLink.textContent = 'Mabes Resto (Modified)';
+    logoLink.textContent = 'MR';
     nav.appendChild(logoLink);
 
     const burgerButton = document.createElement('button');
     burgerButton.id = 'burger';
     burgerButton.classList.add('hamburger');
-    burgerButton.href = '#';
     burgerButton.setAttribute('aria-label', 'navigation-menu');
     burgerButton.innerHTML = '<i class="fas fa-bars"></i>';
     nav.appendChild(burgerButton);

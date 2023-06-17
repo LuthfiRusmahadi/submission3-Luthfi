@@ -17,7 +17,7 @@ function createHomePage(restaurant) {
             <span>⭐</span>${restaurant.rating}</p>
           
           <h1 class="list_restaurant_title" alt='Name of resto ${restaurant.name}'>
-            <h1>${restaurant.name}</h1>
+              ${restaurant.name}
           </h1>
           
           <p class="list_restaurant_description">${restaurant.description}</p>
@@ -64,7 +64,7 @@ function createDetailPage(restaurant) {
                     <p>${review.name}</p>
                     <p>${review.date}</p>
                   </div>
-                  <p>${review.review}</p>
+                  <p class="review-desc">${review.review}</p>
                 </div>
               `,
     )
