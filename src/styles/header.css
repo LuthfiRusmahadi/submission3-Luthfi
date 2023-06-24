@@ -66,7 +66,6 @@ nav ul li a {
 }
 
 .hero {
-  background-image: url(../public/images/heros/hero-image_1.jpg);
   display: flex;
   padding: 0 80px;
   align-items: center;
@@ -74,7 +73,17 @@ nav ul li a {
   width: 100%;
   justify-content: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../public/images/heros/hero-image_1.jpg);
 }
+
+@media (max-width: 600px) {
+  .hero {
+    background-image: url(../public/images/heros/hero-image_1.jpg);
+  }
+}
+
 
 .hero__title {
   color: #fff;

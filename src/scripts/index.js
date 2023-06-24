@@ -4,8 +4,9 @@ import App from './views/app';
 import '../customElement/navbar_custom';
 import '../customElement/footer_custom';
 import swRegister from './utils/sw-register';
-import { WebSocketInitiator } from './utils/websocket-initiator';
-import CONFIG from './globals/config';
+
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const app = new App({
   button: document.querySelector('#burger'),
@@ -20,5 +21,4 @@ window.addEventListener('hashchange', () => {
 window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
-  WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });

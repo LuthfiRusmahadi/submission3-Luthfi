@@ -8,8 +8,8 @@ function createHomePage(restaurant) {
           <h2><b>${restaurant.city}</b></h2>
         </span>
 
-        <img class="list_restaurant_img"
-          src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
+        <img class="list_restaurant_img lazyload"
+          data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
           alt="Restaurant Picture ${restaurant.name}">
 
         <div class="list_restaurant_content">
@@ -31,7 +31,7 @@ function createDetailPage(restaurant) {
   return `
     <div class="detail-page">
       <a href="/" class="back-link"><i class="fa-solid fa-right-to-bracket"></i> Back</a>
-      <img class="detail-image" alt="${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/>
+      <img class="detail-image lazyload" alt="${restaurant.name}" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" />
       <div tabindex="0" class="restaurant-content">
         <h2 class="restaurant-title">${restaurant.name}</h2>
         <p class="restaurant-desc">${restaurant.description}</p>

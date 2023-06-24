@@ -35,6 +35,16 @@ const Home = {
     restaurants.forEach((restaurant) => {
       restaurantList.innerHTML += createHomePage(restaurant);
     });
+
+    // Added responsive images
+    const images = document.querySelectorAll('.restaurant__image');
+    images.forEach((image) => {
+      const imageSrc = image.getAttribute('src');
+      const imageSmallSrc = imageSrc.replace('.jpg', '-small.jpg');
+
+      image.setAttribute('srcset', `${imageSmallSrc} 480w, ${imageSrc} 800w`);
+      image.setAttribute('sizes', '(max-width: 600px) 480px, 800px');
+    });
   },
 };
 

@@ -9,50 +9,49 @@ const NotificationHelper = {
 
       const isPermitted = await this._checkPermission();
       if (!isPermitted) {
-        console.info('User did not yet grant permission');
+        console.info('User did not grant permission yet');
         await this._requestPermission();
       }
 
-      this._showNotification({ title, options });
+      await this._showNotification({ title, options });
     } catch (error) {
       console.error('Error:', error);
     }
   },
 
-  _checkAvailability() {
-    return new Promise((resolve) => {
-      resolve(Boolean('Notification' in window));
-    });
+  async _checkAvailability() {
+    return Boolean('Notification' in window);
   },
 
-  _checkPermission() {
-    return new Promise((resolve) => {
-      resolve(Notification.permission === 'granted');
-    });
+  async _checkPermission() {
+    return Notification.permission === 'granted';
   },
 
-  _requestPermission() {
-    return new Promise((resolve) => {
-      Notification.requestPermission((status) => {
-        if (status === 'denied') {
-          console.log('Notification Denied');
-        }
-        if (status === 'default') {
-          console.warn('Permission closed');
-        }
-        resolve();
-      });
-    });
+  async _requestPermission() {
+    try {
+      const status = await Notification.requestPermission();
+      if (status === 'denied') {
+        console.log('Notification Denied');
+      }
+      if (status === 'default') {
+        console.warn('Permission closed');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   },
 
-  _showNotification({ title, options }) {
-    navigator.serviceWorker.ready
-      .then((serviceWorkerRegistration) => {
-        serviceWorkerRegistration.showNotification(title, options);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+  async _showNotification({ title, options }) {
+    try {
+      if (Notification.permission === 'granted') {
+        const serviceWorkerRegistration = await navigator.serviceWorker.ready;
+        await serviceWorkerRegistration.showNotification(title, options);
+      } else {
+        console.log('Notification permission is not granted.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   },
 };
 

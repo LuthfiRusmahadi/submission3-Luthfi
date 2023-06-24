@@ -39,7 +39,9 @@ const Detail = {
         data,
       });
     } catch (error) {
-      console.log(error);
+      loading.style.display = 'none';
+      restaurantContainer.style.display = 'block';
+      restaurantContainer.innerHTML = `<h2 class="detail__error">${error}</h2>`;
     }
   },
 };
