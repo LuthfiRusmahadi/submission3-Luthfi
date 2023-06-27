@@ -1,0 +1,35 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true,
+      "jest": true // Menambahkan jest sebagai environment
+    },
+    "extends": "airbnb-base",
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "rules": {
+      "import/no-extraneous-dependencies": 0,
+      "no-console": 0,
+      "no-underscore-dangle": 0,
+      "no-restricted-globals": 0,
+      "linebreak-style": 0
+    },
+    "globals": {
+      "describe": "readonly", // Menambahkan describe sebagai global read-only
+      "beforeEach": "readonly", // Menambahkan beforeEach sebagai global read-only
+      "afterEach": "readonly", // Menambahkan afterEach sebagai global read-only
+      "it": "readonly", // Menambahkan it sebagai global read-only
+      "expect": "readonly", // Menambahkan expect sebagai global read-only
+      "Feature": true,
+      "Scenario": true,
+      "Before": true,
+      "After": true,
+      "actor": true,
+      "I": true
+    }
+  }
+  
